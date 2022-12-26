@@ -64,3 +64,6 @@ def task_three():
     pprint(get_count_of_each())
     pprint(get_random_singular_info())
 
+
+# print(get_count_of_each())
+# pprint(get_random_singular_info())

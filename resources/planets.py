@@ -33,6 +33,11 @@ class Planets(ResourceBase):
         singular_planet_url = self.home_url + self.__relative_url
         return singular_planet_url
 
+    def get_sample_data(self):
+        sample = self.home_url + self.__relative_url + "/1"
+        response = hit_url(sample)
+        return response.json()
+
     def random(self):
         return random.randrange(1,self.count)
 

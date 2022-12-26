@@ -33,11 +33,20 @@ class Characters(ResourceBase):
         singular_character_url = self.home_url + self.__relative_url
         return singular_character_url
 
+    def get_sample_data(self):
+        sample = self.home_url + self.__relative_url+ "/1"
+        response = hit_url(sample)
+        if isinstance(response, str):
+            return "Data not found"
+        return response.json()
+
     def random(self):
         return random.randrange(1,self.count)
 
 
-# c = Characters()
+c = Characters()
 # print("The count of Characters is:",c.get_count())
 # re = c.generator()
 # print(c.get_resource_urls(next(re)))
+
+# print(c.get_sample_data())

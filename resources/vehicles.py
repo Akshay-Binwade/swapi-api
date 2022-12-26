@@ -34,6 +34,11 @@ class Vehicles(ResourceBase):
         singular_vehicels_url = self.home_url + self.__relative_url
         return singular_vehicels_url
 
+    def get_sample_data(self):
+        sample = self.home_url + self.__relative_url + "/4"
+        response = hit_url(sample)
+        return response.json()
+
     def random(self):
         return random.randrange(1,self.count)
 

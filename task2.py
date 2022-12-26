@@ -6,7 +6,7 @@ class Swapi:
     '''Here the information of film 1 from swapi api is collected'''
     def __init__(self):
         self.home_url = "https://swapi.dev"
-        self.relative_url = "/api/films/1"
+        self.relative_url = "/api/films/3"
         self.result = requests.get(self.home_url + self.relative_url)
         self.result = self.result.json()   # Info of film 1 is collected here in dict format
 

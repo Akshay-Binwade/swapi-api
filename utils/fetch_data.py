@@ -53,13 +53,16 @@ def hit_url(url):
 
 def fetch_data(urls: List) -> List:
     """fetching data from urls"""
-
     data = []
     for url in urls:
         res = hit_url(url)
         data.append(res.json())
 
     return data
+
+def hit_url2(url: str):
+    response = requests.get(url)
+    return response.json()
 
 
 if __name__ == "__main__":

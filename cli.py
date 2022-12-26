@@ -13,6 +13,7 @@ if __name__ == '__main__':
                                      epilog="You can just give argument as 1, 2 or 3")
     parser.add_argument("task", type=int, choices=[1,2,3], nargs="*")
     args = parser.parse_args()
+
     if args.task == 1:
         task_one()
     elif args.task == 2:
@@ -23,7 +24,7 @@ if __name__ == '__main__':
         if 1 in args.task:
             task_one()
         elif 2 in args.task:
-            task_one()
+            task_two()
         elif 3 in args.task:
             task_three()
         else:

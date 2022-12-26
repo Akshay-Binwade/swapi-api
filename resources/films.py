@@ -34,6 +34,11 @@ class Films(ResourceBase):
         singular_films_url = self.home_url + self.__relative_url
         return singular_films_url
 
+    def get_sample_data(self):
+        sample = self.home_url + self.__relative_url + "/1"
+        response = hit_url(sample)
+        return response.json()
+
     def random(self):
         return random.randrange(1,self.count)
 
@@ -43,4 +48,4 @@ class Films(ResourceBase):
 # print(f.set_films_range (1,f.get_count()))
 # print(f.get_films_range())
 # print("The count of planets is:",f.get_count())
-
+# print(f.get_sample_data())

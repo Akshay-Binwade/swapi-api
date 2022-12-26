@@ -3,3 +3,5 @@
 venv
 *.log
 .idea
+dummy.py
+test.py
