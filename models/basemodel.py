@@ -3,8 +3,7 @@ This module defines a pydantic basemodel to be used by another
 pydantic models (resource models aka "datamodels")
 """
 
-from pydantic import BaseModel,validator
-from datetime import datetime
+from pydantic import BaseModel
 from datetime import datetime
 
 class Base(BaseModel):
@@ -13,16 +12,6 @@ class Base(BaseModel):
     created: datetime
     edited: datetime
     url: str
-
-    @validator("created")
-    @classmethod
-    def created_on(cls,created):
-        return created.strftime("%Y-%m-%d")
-
-    @validator("edited")
-    @classmethod
-    def edited_on(cls,edited):
-        return edited.strftime("%Y-%m-%d")
 
 
 if __name__ == "__main__":

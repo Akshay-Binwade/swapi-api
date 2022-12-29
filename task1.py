@@ -17,10 +17,10 @@ class Swapi:
         print(result)
 
 
-    def task_one():
-        c = Swapi()
-        '''This loop invokes 'fetch' method of swapi in each iteration'''
-        for i in range(1, 16):
-            c.fetch()
-            print("#" * 100)
-            print()
+def task_one():
+    c = Swapi()
+    '''This loop invokes 'fetch' method of swapi in each iteration'''
+    for i in range(1, 16):
+        c.fetch()
+        print("#" * 100)
+        print()
